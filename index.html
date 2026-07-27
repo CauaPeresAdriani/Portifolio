@@ -404,7 +404,7 @@ function typeLine() {
     div.innerHTML =
         `<span>${current.prompt}</span>${current.text.slice(0, charIndex)}<span class="type-cursor"></span>`;
 
-    charIndex++;
+    charIndex += 2;
 
     if (charIndex <= current.text.length) {
         setTimeout(typeLine, 6);
