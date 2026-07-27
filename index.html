@@ -21,10 +21,22 @@
         })();
     </script>
 
-</head>
-<body>
 
-    <div class="header-background">
+
+</head>
+<body class="loading">
+
+<div class="loader-screen" id="loaderScreen">
+    <div class="loader-terminal">
+        <div class="bar">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+        </div>
+        <div class="body" id="loaderBody"></div>
+    </div>
+</div>
+     <div class="header-background">
         <header class="header">
             <div class="profile">
                 <img src="img/Profile.jpeg" alt="Cauã Adriani">
@@ -43,7 +55,6 @@
             </nav>
         </header>
     </div>
-
     <section class="hero" id="inicio">
         <div>
             <p class="prompt">cauã@dev:~$ whoami<span class="cursor"></span></p>
@@ -323,7 +334,7 @@
                 <i class="fa-brands fa-linkedin"></i>LinkedIn
             </a>
 
-            <a href="mailto:cauaperesacademico@gmail.com"">
+            <a href="mailto:cauaperesacademico@gmail.com">
                 <i class="fa-solid fa-envelope"></i>Email
             </a>
 
@@ -338,6 +349,75 @@
         <p>Desenvolvedor Back-End Java</p>
         <p class="footer-mono">©2026 Todos os direitos reservados</p>
     </footer>
+
+        <script>
+const lines = [
+    { prompt: "caua@dev:~$ ", text: "whoami" },
+    { prompt: "", text: "Cauã Adriani" },
+
+    { prompt: "caua@dev:~$ ", text: "java --version" },
+    { prompt: "", text: "openjdk 21.0.2" },
+
+    { prompt: "caua@dev:~$ ", text: "git status" },
+    { prompt: "", text: "On branch main" },
+    { prompt: "", text: "Your branch is up to date with 'origin/main'." },
+
+    { prompt: "caua@dev:~$ ", text: "mvn clean package" },
+    { prompt: "", text: "[INFO] BUILD SUCCESS" },
+
+    { prompt: "caua@dev:~$ ", text: "./portfolio" },
+    { prompt: "", text: "✓ HTML" },
+    { prompt: "", text: "✓ CSS" },
+    { prompt: "", text: "✓ JavaScript" },
+    { prompt: "", text: "✓ Java" },
+    { prompt: "", text: "✓ Spring Boot" },
+    { prompt: "", text: "✓ SQL" },
+    { prompt: "", text: "✓ Git" },
+    { prompt: "", text: "Welcome!" }
+];
+
+const body = document.getElementById("loaderBody");
+const screen = document.getElementById("loaderScreen");
+
+let lineIndex = 0;
+let charIndex = 0;
+
+function typeLine() {
+    if (lineIndex >= lines.length) {
+        setTimeout(() => {
+            screen.classList.add("hidden");
+            document.body.classList.remove("loading");
+        }, 100);
+        return;
+    }
+
+    const current = lines[lineIndex];
+
+    let div = document.getElementById("l" + lineIndex);
+    if (!div) {
+        div = document.createElement("div");
+        div.id = "l" + lineIndex;
+        div.className = "line";
+        body.appendChild(div);
+    }
+
+    div.innerHTML =
+        `<span>${current.prompt}</span>${current.text.slice(0, charIndex)}<span class="type-cursor"></span>`;
+
+    charIndex++;
+
+    if (charIndex <= current.text.length) {
+        setTimeout(typeLine, 6);
+    } else {
+        div.querySelector(".type-cursor").remove();
+        lineIndex++;
+        charIndex = 0;
+        setTimeout(typeLine, 40);
+    }
+}
+
+window.addEventListener("load", typeLine);
+</script>
 
     <script>
         var toggleBtn = document.getElementById('themeToggle');
