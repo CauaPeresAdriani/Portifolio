@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cauã Adriani — estudante de Sistemas de Informação e futuro Desenvolvedor Back-End Java. Confira meus projetos, tecnologias e trajetória.">
+    <title>Cauã Adriani — Desenvolvedor Back-End</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <script>
+        (function(){
+            var saved = localStorage.getItem('theme');
+            var theme = saved || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+
+</head>
+<body>
+
+    <div class="header-background">
+        <header class="header">
+            <div class="profile">
+                <img src="img/Profile.jpeg" alt="Cauã Adriani">
+                <h2>Cauã Adriani</h2>
+            </div>
+            <nav>
+                <a href="#inicio">Início</a>
+                <a href="#tecnologias">Tecnologias</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#projetos">Projetos</a>
+                <a href="#contato">Contato</a>
+                <button class="theme-toggle" id="themeToggle" type="button" aria-label="Alternar tema claro/escuro">
+                    <i class="fa-solid fa-moon"></i>
+                    <i class="fa-solid fa-sun"></i>
+                </button>
+            </nav>
+        </header>
+    </div>
+
+    <section class="hero" id="inicio">
+        <div>
+            <p class="prompt">cauã@dev:~$ whoami<span class="cursor"></span></p>
+            <h2>Olá, eu sou Cauã Adriani</h2>
+            <h1>Desenvolvedor <span class="accent">Back-End</span></h1>
+            <p>Transformando ideias em soluções eficientes, uma API de cada vez.</p>
+        </div>
+        <div class="links">
+            <a class="contacts" href="https://github.com/CauaPeresAdriani" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-github"></i> GITHUB
+            </a>
+            <a class="contacts" href="https://www.linkedin.com/in/cau%C3%A3-peres-adriani-3347a1321/" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-linkedin"></i> LINKEDIN
+            </a>
+            <a class="contacts primary" href="curriculo-caua-adriani.pdf" download>
+                <i class="fa-solid fa-download"></i> CURRÍCULO
+            </a>
+        </div>
+    </section>
+
+    <section class="tecnologias" id="tecnologias">
+        <div class="section-titulo">
+            <span class="titulo">// stack</span>
+            <h2>Tecnologias</h2>
+        </div>
+
+        <div class="cards-grid">
+
+            <div class="card">
+                <div class="icon"><i class="fa-brands fa-html5"></i></div>
+                <h3>HTML5</h3>
+                <p>Estruturação semântica de páginas, acessível e otimizada para SEO.</p>
+            </div>
+
+            <div class="card">
+                <div class="icon"><i class="fa-brands fa-css3-alt"></i></div>
+                <h3>CSS3</h3>
+                <p>Layouts responsivos com Flexbox, Grid e animações leves.</p>
+            </div>
+
+            <div class="card">
+                <div class="icon"><i class="fa-brands fa-java"></i></div>
+                <h3>Java</h3>
+                <p>Lógica orientada a objetos e desenvolvimento de aplicações robustas.</p>
+            </div>
+
+            <div class="card">
+                <div class="icon"><i class="fa-brands fa-php"></i></div>
+                <h3>PHP</h3>
+                <p>Scripts server-side e integração com bancos de dados relacionais.</p>
+            </div>
+
+            <div class="card">
+                <div class="icon"><i class="fa-brands fa-python"></i></div>
+                <h3>Python</h3>
+                <p>Automação de tarefas e scripts para análise e manipulação de dados.</p>
+            </div>
+
+            <div class="card">
+                <div class="icon"><i class="fa-solid fa-database"></i></div>
+                <h3>SQL</h3>
+                <p>Modelagem de dados e consultas em bancos relacionais como MySQL.</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">C#</div>
+                <h3>C#</h3>
+                <p>Desenvolvimento orientado a objetos com foco em boas práticas.</p>
+            </div>
+
+            <div class="card">
+                <div class="icon"><i class="fa-brands fa-git-alt"></i></div>
+                <h3>Git &amp; GitHub</h3>
+                <p>Controle de versão e colaboração em projetos de forma organizada.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="sobre" id="sobre">
+        <div class="sobre-img">
+            <img src="img/Profile.jpeg" alt="Cauã Adriani">
+        </div>
+
+        <div class="sobre-texto">
+            <span class="titulo">// sobre mim</span>
+            <h2>Sobre Mim</h2>
+
+            <p>
+                Olá! Meu nome é <strong>Cauã Adriani</strong> e sou estudante de
+                Sistemas de Informação, apaixonado por tecnologia e desenvolvimento
+                Back-end.
+            </p>
+
+            <p>
+                Atualmente estudo Java, Spring Boot, APIs REST, bancos de dados SQL
+                e desenvolvimento Web. Meu objetivo é conquistar minha primeira
+                oportunidade como Desenvolvedor Java e continuar evoluindo
+                profissionalmente.
+            </p>
+        </div>
+    </section>
+
+    <section class="formacao">
+        <div class="section-titulo">
+            <span class="titulo">// trajetória</span>
+            <h2>Formação</h2>
+        </div>
+
+        <div class="timeline">
+            <div class="item">
+                <h3>Sistemas de Informação</h3>
+                <span>Universidade de Mogi das Cruzes</span>
+                <p>2024 — 2027 (previsão)</p>
+            </div>
+
+            <div class="item">
+                <h3>Desenvolvimento Web</h3>
+                <span>Estudos Independentes</span>
+                <p>HTML • CSS • JavaScript • Git • GitHub</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="objetivos">
+        <div class="section-titulo">
+            <span class="titulo">// próximos passos</span>
+            <h2>Objetivos</h2>
+        </div>
+
+        <div class="objetivos-container">
+            <div class="objetivo">
+                <i class="fa-solid fa-laptop-code"></i>
+                <h3>Primeira Vaga</h3>
+                <p>Ingressar no mercado como Desenvolvedor Back-end Java.</p>
+            </div>
+
+            <div class="objetivo">
+                <i class="fa-solid fa-code"></i>
+                <h3>Especialização</h3>
+                <p>Aprofundar meus conhecimentos em Java, Spring Boot e APIs REST.</p>
+            </div>
+
+            <div class="objetivo">
+                <i class="fa-solid fa-cloud"></i>
+                <h3>Cloud</h3>
+                <p>Aprender Docker, AWS e microsserviços.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="estudos">
+        <div class="section-titulo">
+            <span class="titulo">// em progresso</span>
+            <h2>Atualmente Estudando</h2>
+        </div>
+
+        <div class="skill">
+            <div class="skill-label"><span>HTML &amp; CSS</span><span>85%</span></div>
+            <div class="barra"><div class="progresso html"></div></div>
+        </div>
+
+        <div class="skill">
+            <div class="skill-label"><span>JavaScript</span><span>60%</span></div>
+            <div class="barra"><div class="progresso js"></div></div>
+        </div>
+
+        <div class="skill">
+            <div class="skill-label"><span>Java</span><span>75%</span></div>
+            <div class="barra"><div class="progresso java"></div></div>
+        </div>
+
+        <div class="skill">
+            <div class="skill-label"><span>Spring Boot</span><span>35%</span></div>
+            <div class="barra"><div class="progresso spring"></div></div>
+        </div>
+    </section>
+
+    <section class="estatisticas">
+        <div class="numero">
+            <h2>3</h2>
+            <p>Projetos</p>
+        </div>
+
+        <div class="numero">
+            <h2>8+</h2>
+            <p>Tecnologias</p>
+        </div>
+
+        <div class="numero">
+            <h2>250+</h2>
+            <p>Horas de estudo</p>
+        </div>
+
+        <div class="numero">
+            <h2>2024</h2>
+            <p>Início da programação</p>
+        </div>
+    </section>
+
+    <section class="projetos" id="projetos">
+        <div class="section-titulo">
+            <span class="titulo">// portfólio</span>
+            <h2>Projetos</h2>
+        </div>
+
+        <div class="projetos-container">
+
+            <div class="projeto-card">
+                <h3>Gestão Shop</h3>
+                <p>
+                    Sistema desktop desenvolvido em Java para gerenciamento de
+                    produtos, clientes e vendas.
+                </p>
+                <div class="tecnologias-projeto">
+                    <span>Java</span>
+                    <span>Swing</span>
+                    <span>MySQL</span>
+                </div>
+                <div class="projeto-links">
+                    <a href="https://github.com/CauaPeresAdriani" target="_blank" rel="noopener">GitHub</a>
+                </div>
+            </div>
+
+            <div class="projeto-card">
+                <h3>Portfólio Pessoal</h3>
+                <p>
+                    Portfólio responsivo desenvolvido para apresentar meus projetos,
+                    habilidades e trajetória como desenvolvedor.
+                </p>
+                <div class="tecnologias-projeto">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                </div>
+                <div class="projeto-links">
+                    <a href="https://github.com/CauaPeresAdriani" target="_blank" rel="noopener">GitHub</a>
+                </div>
+            </div>
+
+            <div class="projeto-card">
+                <h3>API REST</h3>
+                <p>
+                    API desenvolvida com Java e Spring Boot para gerenciamento de
+                    usuários e autenticação.
+                </p>
+                <div class="tecnologias-projeto">
+                    <span>Java</span>
+                    <span>Spring</span>
+                    <span>MySQL</span>
+                </div>
+                <div class="projeto-links">
+                    <a href="https://github.com/CauaPeresAdriani" target="_blank" rel="noopener">GitHub</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="contato" id="contato">
+        <div class="section-titulo">
+            <span class="titulo">// vamos conversar</span>
+            <h2>Contato</h2>
+        </div>
+
+        <p>
+            Estou disponível para oportunidades de estágio,
+            freelancer e desenvolvimento Back-end.
+        </p>
+
+        <div class="contato-links">
+            <a href="https://github.com/CauaPeresAdriani" target="_blank" rel="noopener">
+                <i class="fa-brands fa-github"></i>GitHub
+            </a>
+
+            <a href="https://www.linkedin.com/in/cau%C3%A3-peres-adriani-3347a1321/" target="_blank" rel="noopener">
+                <i class="fa-brands fa-linkedin"></i>LinkedIn
+            </a>
+
+            <a href="mailto:cauaperesacademico@gmail.com"">
+                <i class="fa-solid fa-envelope"></i>Email
+            </a>
+
+            <a href="https://wa.me/5511997340544" target="_blank" rel="noopener">
+                <i class="fa-brands fa-whatsapp"></i>WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <h3>Cauã Adriani</h3>
+        <p>Desenvolvedor Back-End Java</p>
+        <p class="footer-mono">©2026 Todos os direitos reservados</p>
+    </footer>
+
+    <script>
+        var toggleBtn = document.getElementById('themeToggle');
+        toggleBtn.addEventListener('click', function(){
+            var current = document.documentElement.getAttribute('data-theme');
+            var next = current === 'light' ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-theme', next);
+            localStorage.setItem('theme', next);
+        });
+    </script>
+</body>
+</html>
