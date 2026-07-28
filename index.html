@@ -11,8 +11,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
     <script>
         (function(){
             var saved = localStorage.getItem('theme');
@@ -39,7 +39,7 @@
      <div class="header-background">
         <header class="header">
             <div class="profile">
-                <img src="img/Profile.jpeg" alt="Cauã Adriani">
+                <img src="assets/img/Profile.webp" alt="Cauã Adriani" width="48" height="48">
                 <h2>Cauã Adriani</h2>
             </div>
             <nav>
@@ -55,6 +55,9 @@
             </nav>
         </header>
     </div>
+
+    <main>
+
     <section class="hero" id="inicio">
         <div>
             <p class="prompt">cauã@dev:~$ whoami<span class="cursor"></span></p>
@@ -69,7 +72,7 @@
             <a class="contacts" href="https://www.linkedin.com/in/cau%C3%A3-peres-adriani-3347a1321/" target="_blank" rel="noopener noreferrer">
                 <i class="fa-brands fa-linkedin"></i> LINKEDIN
             </a>
-            <a class="contacts primary" href="curriculo-caua-adriani.pdf" download>
+            <a class="contacts primary" href="assets/docs/curriculo-caua-adriani.pdf" download>
                 <i class="fa-solid fa-download"></i> CURRÍCULO
             </a>
         </div>
@@ -136,7 +139,7 @@
 
     <section class="sobre" id="sobre">
         <div class="sobre-img">
-            <img src="img/Profile.jpeg" alt="Cauã Adriani">
+            <img src="assets/img/Profile.webp" alt="Cauã Adriani" width="300" height="300" loading="lazy" decoding="async">
         </div>
 
         <div class="sobre-texto">
@@ -343,6 +346,8 @@
             </a>
         </div>
     </section>
+
+    </main>
 
     <footer>
         <h3>Cauã Adriani</h3>
