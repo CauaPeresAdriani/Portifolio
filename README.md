@@ -84,9 +84,9 @@ Além da apresentação profissional, o projeto serviu para aprofundar conhecime
 
 
 
-```
-assets/img/preview-desktop.png
-```
+
+<img src ="assets/img/preview-desktop.png">
+
 
 ---
 
@@ -94,9 +94,7 @@ assets/img/preview-desktop.png
 
 
 
-```
-assets/img/preview-mobile.jpeg
-```
+<img src ="assets/img/preview-mobile.jpeg">
 
 ---
 
