@@ -15,16 +15,19 @@
     <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
     <script>
         (function(){
-            var saved = localStorage.getItem('theme');
-            var theme = saved || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
-            document.documentElement.setAttribute('data-theme', theme);
+        var saved = localStorage.getItem('theme');
+        var theme = saved || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+        document.documentElement.setAttribute('data-theme', theme);
         })();
-    </script>
-
-
+</script>
+<script src="assets/js/scripts.js" defer></script>
 
 </head>
+
+
 <body class="loading">
+
+    
 
 <div class="loader-screen" id="loaderScreen">
     <div class="loader-terminal">
@@ -52,9 +55,31 @@
                     <i class="fa-solid fa-moon"></i>
                     <i class="fa-solid fa-sun"></i>
                 </button>
+                <button
+                    class="menu-toggle"
+                    id="menuToggle"
+                    type="button"
+                    aria-label="Abrir menu"
+                    aria-expanded="false"
+                    aria-controls="mobileMenu">
+
+                    <i class="fa-solid fa-bars"></i>
+
+                </button>
             </nav>
         </header>
+       
     </div>
+
+        <div class="mobile-menu" id="mobileMenu">
+
+            <a href="#inicio">Início</a>
+            <a href="#tecnologias">Tecnologias</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#contato">Contato</a>
+
+        </div>
 
     <main>
 
@@ -355,83 +380,13 @@
         <p class="footer-mono">©2026 Todos os direitos reservados</p>
     </footer>
 
-        <script>
-const lines = [
-    { prompt: "caua@dev:~$ ", text: "whoami" },
-    { prompt: "", text: "Cauã Adriani" },
 
-    { prompt: "caua@dev:~$ ", text: "java --version" },
-    { prompt: "", text: "openjdk 21.0.2" },
 
-    { prompt: "caua@dev:~$ ", text: "git status" },
-    { prompt: "", text: "On branch main" },
-    { prompt: "", text: "Your branch is up to date with 'origin/main'." },
 
-    { prompt: "caua@dev:~$ ", text: "mvn clean package" },
-    { prompt: "", text: "[INFO] BUILD SUCCESS" },
 
-    { prompt: "caua@dev:~$ ", text: "./portfolio" },
-    { prompt: "", text: "✓ HTML" },
-    { prompt: "", text: "✓ CSS" },
-    { prompt: "", text: "✓ JavaScript" },
-    { prompt: "", text: "✓ Java" },
-    { prompt: "", text: "✓ Spring Boot" },
-    { prompt: "", text: "✓ SQL" },
-    { prompt: "", text: "✓ Git" },
-    { prompt: "", text: "Welcome!" }
-];
 
-const body = document.getElementById("loaderBody");
-const screen = document.getElementById("loaderScreen");
-
-let lineIndex = 0;
-let charIndex = 0;
-
-function typeLine() {
-    if (lineIndex >= lines.length) {
-        setTimeout(() => {
-            screen.classList.add("hidden");
-            document.body.classList.remove("loading");
-        }, 100);
-        return;
-    }
-
-    const current = lines[lineIndex];
-
-    let div = document.getElementById("l" + lineIndex);
-    if (!div) {
-        div = document.createElement("div");
-        div.id = "l" + lineIndex;
-        div.className = "line";
-        body.appendChild(div);
-    }
-
-    div.innerHTML =
-        `<span>${current.prompt}</span>${current.text.slice(0, charIndex)}<span class="type-cursor"></span>`;
-
-    charIndex += 2;
-
-    if (charIndex <= current.text.length) {
-        setTimeout(typeLine, 6);
-    } else {
-        div.querySelector(".type-cursor").remove();
-        lineIndex++;
-        charIndex = 0;
-        setTimeout(typeLine, 40);
-    }
-}
-
-window.addEventListener("load", typeLine);
-</script>
-
-    <script>
-        var toggleBtn = document.getElementById('themeToggle');
-        toggleBtn.addEventListener('click', function(){
-            var current = document.documentElement.getAttribute('data-theme');
-            var next = current === 'light' ? 'dark' : 'light';
-            document.documentElement.setAttribute('data-theme', next);
-            localStorage.setItem('theme', next);
-        });
-    </script>
+   
+       
+    
 </body>
 </html>
