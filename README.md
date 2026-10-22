@@ -186,8 +186,8 @@ Algumas boas práticas aplicadas:
 - Animações com Intersection Observer
 - Internacionalização (PT/EN)
 - Página 404 personalizada
-- Projetos consumindo APIs reais
-- Integração com GitHub API
+- Projetos consumindo dados reais
+- Integração com repositórios do GitHub
 - Formulário de contato
 
 ---

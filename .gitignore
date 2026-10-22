@@ -1,3 +1,6 @@
 worker-chatbot/.dev.vars
 worker-chatbot/.wrangler/
 worker-chatbot/node_modules/
+*.bak
+*.bak-*
+AGENTS.md
