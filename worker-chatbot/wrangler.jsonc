@@ -1,0 +1,10 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "portfolio-caua-chatbot",
+  "main": "src/index.js",
+  "compatibility_date": "2026-10-21",
+  "workers_dev": true,
+  "vars": {
+    "ALLOWED_ORIGIN": "http://127.0.0.1:8000"
+  }
+}
